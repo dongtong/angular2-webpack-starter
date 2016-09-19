@@ -2,7 +2,16 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'my-app',
-    template: '<h1>My Angular 2 App</h1>'
+    templateUrl: './src/app/app.component.html',
+    styleUrls: ['./src/app/app.component.css']
 })
 
-export class AppComponent {}
+export class AppComponent {
+    greeting: string = 'foobar';
+    
+    constructor() {}
+
+    greet(): void {
+        alert(this.greeting);
+    }
+}
